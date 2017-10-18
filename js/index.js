@@ -45,11 +45,16 @@ $(document).ready(function() { 
         $("#screen").empty();
 
         result = eval(firstNum)
+
+        if (result == "Infinity") {
+          $("#screen").append("ERROR");
+          console.log("ERROR");
+        } else {
         $("#screen").append(result);
         console.log(result);
+      }
 
-        firstNumArr.splice(0,5,result);
-        console.log("new firstNumArr = ", firstNumArr);
+
       }
 
     } //end of for loop
