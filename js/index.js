@@ -18,6 +18,13 @@ $(document).ready(function() { 
     //declare evet.target text
     var $targetInnerText = $(event.target).context.innerText
 
+    if ($targetInnerText === "C") { //TO CLEAR
+      $('#clear').click(function() {
+        location.reload();
+      });
+
+    } else {
+
       //record first numbers being pushed
       firstNumArr.push($targetInnerText);
       $("#screen").append($targetInnerText);
@@ -45,7 +52,7 @@ $(document).ready(function() { 
         console.log("new firstNumArr = ", firstNumArr);
       }
 
-
+    } //end of for loop
   }) //end of event listener for buttons
 
 }) //end of document.ready
