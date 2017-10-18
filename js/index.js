@@ -19,10 +19,7 @@ $(document).ready(function() { 
     var $targetInnerText = $(event.target).context.innerText
 
     if ($targetInnerText === "C") { //TO CLEAR
-      $('#clear').click(function() {
         location.reload();
-      });
-
     } else {
 
       //record first numbers being pushed
