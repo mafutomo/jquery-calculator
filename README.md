@@ -1,6 +1,10 @@
 # jQuery Calculator
 
+<<<<<<< HEAD
 MY DEPLOYED SITE -- http://mafutomo-jquery-calculator.surge.sh/ ---
+=======
+MY DEPLOYED SITE -- http://mafutomo-jquery-calculator.surge.sh/ --- 
+>>>>>>> 5f46362c38b13bec4be36d2541db27a3aca7ccb7
 
 Use jQuery to build a basic calculator using the provided HTML and CSS.
 
