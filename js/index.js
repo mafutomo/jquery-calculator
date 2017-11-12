@@ -1,25 +1,39 @@
+//GLOBAL VARIABLES
+var buttonsContainer = $("#buttons-container")
+var firstNumArr = [];
+var firstNum = "";
+var operator = "";
+var strArgument = "";
+var result = "";
+var $screen = $("#screen")
+
+
+function throwError (res) {
+  if (res == "Infinity") {
+     $screen.append("ERROR");
+    return "error"
+  } else {
+   $screen.append(res);
+  }
+}
+
+function clearScreen(){
+  location.reload();
+}
+
 $(document).ready(function() { 
   console.log("ready!");
 
-  //GLOBAL VARIABLES
-  var buttonsContainer = $("#buttons-container")
-  var firstNumArr = [];
-  var firstNum = "";
-  // var secondNumArr = [];
-  // var secondNum = "";
-  var operator = "";
-  var strArgument = "";
-  var result = "";
-
   //THE EVENT LISTENER
-
 
   buttonsContainer.on("click", function(event) {
     //declare evet.target text
+      console.log(event.target);
     var $targetInnerText = $(event.target).context.innerText
 
     if ($targetInnerText === "C") { //TO CLEAR
-        location.reload();
+        clearScreen()
+
     } else {
 
       //record first numbers being pushed
@@ -43,13 +57,8 @@ $(document).ready(function() { 
 
         result = eval(firstNum)
 
-        if (result == "Infinity") {
-          $("#screen").append("ERROR");
-          console.log("ERROR");
-        } else {
-        $("#screen").append(result);
-        console.log(result);
-      }
+        throwError(result)
+
 
 
       }
