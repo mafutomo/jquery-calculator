@@ -1,5 +1,7 @@
 # jQuery Calculator
 
+MY DEPLOYED SITE -- http://mafutomo-jquery-calculator.surge.sh/ ---
+
 Use jQuery to build a basic calculator using the provided HTML and CSS.
 
 ![Example](screenshots/example.gif)
